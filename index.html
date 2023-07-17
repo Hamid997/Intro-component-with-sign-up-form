@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -22,11 +22,19 @@
         <div class="blockNote">
           <h6> Try it free 7 days <span>then $20/mo. thereafter</span></h6>
         </div>
-        <form action="">
-          <input type="text" placeholder="First Name"><br>
-          <input type="text" placeholder="Last Name"><br>
-          <input type="email" placeholder="Email Address"><br>
-          <input type="password" placeholder="Password"><br>
+        <form action="" class="form-group">
+          <div class="form-block">
+            <input type="text" placeholder="First Name" id="firstName">
+          </div>
+          <div class="form-block">
+            <input type="text" placeholder="Last Name" id="lastName">
+          </div>
+          <div class="form-block">
+            <input type="email" placeholder="Email Address" id="email">
+          </div>
+          <div class="form-block">
+            <input type="password" placeholder="Password" id="password">
+          </div>
           <button>Claim your free trial</button>
           <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
         </form>
@@ -39,5 +47,7 @@
           Coded by <a href="https://github.com/Hamid997" target="_blank">Abdelhamid Birouk</a>.
         </p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
