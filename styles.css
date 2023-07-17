@@ -103,7 +103,7 @@ form {
 form input {
     width: 100%;
     padding: 15px 20px;
-    margin-bottom: 15px;
+    margin-top: 15px;
     border-radius: 5px;
     border: 0.5px solid var(--Grayish-Blue);
     color: var(--Dark-Blue);
@@ -124,9 +124,15 @@ form button {
     border-radius: 5px;
     color: var(--White);
     text-transform: uppercase;
+    margin-top: 15px;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0px 5px 5px 0px hsl(154, 58%, 36%);
+}
+
+form button:hover {
+    background-color: hsl(152, 52%, 57%);
+    transition: all 0.3s ease-in;
 }
 
 form p {
@@ -151,12 +157,46 @@ form p a {
     color: hsl(228, 45%, 44%);
 }
 
+.form-group input.error{
+    border-color: var(--Red);
+    margin-top: -15px;
+}
+.form-group input.error::placeholder{
+    color: var(--Red);
+}
+.form-group small {
+    position: relative;
+    display: flex;
+    font-size: 12px;
+    /* margin-top: 55px; */
+    /* margin-left: -250px; */
+    font-style: italic;
+    justify-content: right;
+    color: var(--Red);
+}
 
+.form-group span {
+    position: relative;
+    display: flex;
+    /* margin-bottom: 50px; */
+    margin-right: 20px;
+    justify-content: flex-end;
+    top: -55px;
+    /* right: 150px; */
+    /* height: 45px; */
+    /* top: 28px; */
+    /* font-size: 13px; */
+    /* line-height: 45px; */
+    /* width: 45px; */
+    /* cursor: pointer; */
+    /* color: #505050; */
+    /* text-align: center; */
+}
 
 @media only screen and (max-width: 700px) {
     body {
         background-image: url(images/bg-intro-mobile.png);
-        margin: 30px 0;
+        margin: 80px 0;
         /* padding: 20px 0; */
         width: 100vw;
         min-height: 100vh;
@@ -180,6 +220,6 @@ form p a {
         width: 100%;
     }
     form {
-        padding: 20px;
+        padding: 30px 20px;
     }
 }
