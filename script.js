@@ -9,15 +9,6 @@ function errorMsg(field, errorText) {
     field.closest(".form-block").appendChild(errorElement);
 }
 
-function errorIcon(field){
-
-    var errorSpan = document.createElement("span");
-        errorSpan.classList.add("error-icon");
-        errorSpan.innerHTML = `
-            <img src="images/icon-error.svg" alt="error">
-        `
-    field.closest(".form-block").appendChild(errorSpan);
-}
 
 function validateForm(e) {
     e.preventDefault();
@@ -53,25 +44,18 @@ function validateForm(e) {
 
     if(firstName === ""){
         errorMsg(firstNameInput, "First Name cannot be empty");
-        errorIcon(firstNameInput);
     }
 
     if(lastName === ""){
         errorMsg(lastNameInput, "Last Name cannot be empty");
-        errorIcon(lastNameInput);
-
     }
 
     if(!emailPattern.test(email)){
         errorMsg(emailInput, "Look like this is not an email");
-        errorIcon(emailInput);
-
     }
 
     if(password === ""){
         errorMsg(passwordInput, "Password cannot be empty");
-        errorIcon(passwordInput);
-
     }
 
     var checkErrors = document.querySelectorAll(".form-block .error");
