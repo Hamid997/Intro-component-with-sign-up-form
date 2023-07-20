@@ -9,13 +9,11 @@
     --Dark-Blue: hsl(249, 10%, 26%);
     --Grayish-Blue: hsl(246, 25%, 77%);
 }
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 body{
     background-image: url(images/bg-intro-desktop.png);
     background-color: var(--Red);
@@ -32,27 +30,27 @@ body{
     justify-content: center;
 }
 
-main{
+/* main */
+main {
     width: 80%;
-    height: 80%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
+/* left Block */
 .leftBlock {
     width: 50%;
     padding: 10px;
 }
-
 .leftBlock h1{
     color: var(--White);
     font-size: 48px;
     line-height: 50px;
     font-size: 700;
 }
-
 .leftBlock p{
     padding-top: 20px;
     color: var(--White);
@@ -60,6 +58,7 @@ main{
     font-size: 300;
 }
 
+/* right Block */
 .rightBlock {
     width: 50%;
     padding: 10px;
@@ -67,7 +66,6 @@ main{
     flex-direction: column;
     justify-content: space-between;
 }
-
 .rightBlock .blockNote {
     border-radius: 15px;
     background-color: var(--Blue);
@@ -77,19 +75,18 @@ main{
     padding: 20px 20px;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.384);
 }
-
 .rightBlock h6{
     font-size: 14px;
     color: var(--White);
     font-weight: 700;
 }
-
 .rightBlock span{
     font-size: 14px;
     color: var(--Grayish-Blue);
     font-weight: 500;
 }
 
+/* Form */
 form {
     background-color: var(--White);
     border-radius: 15px;
@@ -98,8 +95,6 @@ form {
     text-align: center;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.384);
 }
-
-
 form input {
     width: 100%;
     padding: 15px 20px;
@@ -129,37 +124,43 @@ form button {
     cursor: pointer;
     box-shadow: 0px 5px 5px 0px hsl(154, 58%, 36%);
 }
-
 form button:hover {
     background-color: hsl(152, 52%, 57%);
     transition: all 0.3s ease-in;
 }
-
 form p {
     margin-top: 20px;
     font-size: 10px;
     color: var(--Grayish-Blue);
     font-weight: 700;
 }
-
 form p a {
     margin-top: 20px;
     color: var(--Red);
     font-weight: 700;
     text-decoration: none;
 }
+
+/* Footer */
 .attribution {
-    font-size: 11px;
+    margin-top: 5px;
+    font-size: 14px;
     text-align: center;
+    padding: 10px;
+    color: var(--White);
 }
-
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(227, 75%, 88%);
 }
 
-.form-group input.error{
+/* Errors */
+.form-group input.error {
     border-color: var(--Red);
-    margin-top: -15px;
+    margin-top: 7px;
+    background: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    position: relative;
 }
 .form-group input.error::placeholder{
     color: var(--Red);
@@ -168,44 +169,23 @@ form p a {
     position: relative;
     display: flex;
     font-size: 12px;
-    /* margin-top: 55px; */
-    /* margin-left: -250px; */
     font-style: italic;
     justify-content: right;
     color: var(--Red);
 }
 
-.form-group span {
-    position: relative;
-    display: flex;
-    /* margin-bottom: 50px; */
-    margin-right: 20px;
-    justify-content: flex-end;
-    top: -55px;
-    /* right: 150px; */
-    /* height: 45px; */
-    /* top: 28px; */
-    /* font-size: 13px; */
-    /* line-height: 45px; */
-    /* width: 45px; */
-    /* cursor: pointer; */
-    /* color: #505050; */
-    /* text-align: center; */
-}
 
 @media only screen and (max-width: 700px) {
     body {
         background-image: url(images/bg-intro-mobile.png);
         margin: 80px 0;
-        /* padding: 20px 0; */
         width: 100vw;
         min-height: 100vh;
     }
     main {
         margin: 20px;
-        /* padding: 20px; */
         width: 90vw;
-        min-height: 100vh;
+        height: 100vh;
         flex-direction: column;
     }
     .leftBlock {
@@ -215,11 +195,13 @@ form p a {
     .leftBlock h1{
         font-size: 32px;
     }
-    
     .rightBlock {
         width: 100%;
     }
     form {
         padding: 30px 20px;
+    }
+    .attribution {
+        margin-top: 20px;
     }
 }
